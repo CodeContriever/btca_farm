@@ -1,64 +1,61 @@
 import React from "react";
-import ParentCont from "../components/ParentCont";
-import Layout from "../components/Layout";
-import Container from "../components/Container";
+
+
+import Sidebar from "../components/Sidebar";
+import Nav3 from "../components/Nav3";
+import Footer from "../components/Footer";
 import Wrapper from "../components/Wrapper";
-import { Header, Footer, Sidebar, Nav, Copyright } from "../components"
-import Main from "../components/Main";
 
-// import DraggableBox from '../components/dragDrop/DraggableBox';
-// import DroppableArea from '../components/dragDrop/DroppableArea';
-
-import { Box, HStack, Image, Stack, Heading, Text, Divider } from "@chakra-ui/react";
+import { Box, HStack, Image, } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody, CardFooter, } from '@chakra-ui/react'
 import {
   Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon,
 } from '@chakra-ui/react'
 import { InputGroup, Input } from '@chakra-ui/react'
-import { ButtonGroup, Button } from '@chakra-ui/react'
-import { Menu, MenuButton, MenuList, MenuItem, MenuItemOption, MenuGroup, MenuOptionGroup, MenuDivider, } from '@chakra-ui/react'
+import {  Button } from '@chakra-ui/react'
+import { Menu, MenuButton, MenuList, MenuItem, } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 
 
 
 
-
 const Support = () => {
-  // const [droppedBoxes, setDroppedBoxes] = useState([]);
-
-  // const handleDrop = id => {
-  //   const updatedDroppedBoxes = [...droppedBoxes, id];
-  //   setDroppedBoxes(updatedDroppedBoxes);
-  // };
 
   return (
-    <ParentCont
-    >
+    <div
+    className="">
+
       {/* Header */}
-      <Header
-      >
-        <Nav>
-        </Nav>
-      </Header>
+      <header className="bg-white border-b-2 border-gray-200 py-4">
 
-      {/* Main */}
+        {/* Wrapper */}
+        <div className="container mx-auto px-4">
+
+          <Nav3></Nav3>
+
+        </div>
+
+      </header>
+
+
+
       <main
-        className="bg-black mb-8"
+        className="bg-[#F9FAFB]"
       >
 
-        <Container
-          className="container mx-auto bg-white px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12"
-        >
+        {/* Wrapper */}
+        <div className="container mx-auto px-4 py-20">
 
-          <Wrapper
-            className='box-border w-full mx-auto px-2 md:px-12 flex-1 flex-col min-h-[calc(100vh-64px)] gap-12 lg:gap-18 block mt-[48px] lg:grid grid-rows-auto grid-cols-[264px,minmax(0px,1fr)]'>
+          <div className="grid grid-cols-3 gap-4">
 
-            <Box className="">
+            <div className="">
               <Sidebar />
-            </Box>
+            </div>
 
-            <Box>
-              <Wrapper
+            {/* Wallet card */}
+            <div className="col-span-3 lg:col-span-2 w-[100%]">
+
+            <Wrapper
                 className='box-border gap-6 grid mb-6 grid-cols-1 max-cols-content'
               >
                 <div className="box-border flex flex-col gap-6">
@@ -1219,31 +1216,36 @@ const Support = () => {
 
                 </Card>
               </Wrapper>
-            </Box>
 
-          </Wrapper>
+            </div>
 
+          </div>
 
-        </Container>
+        </div>
 
 
       </main>
 
+
+
       {/* Footer */}
       <footer
-        className="bg-black border-t-2 border-gray-200"
+        className="p-4 bg-white sm:p-6 dark:bg-gray-800 border-t-2 border-gray-200"
       >
-        <Container
-          className="container mx-auto bg-white px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12 lg:px-20"
+        {/* Wrapper */}
+        <div
+          className="container mx-auto px-4"
         >
-          <Wrapper>
-            <Footer />
-            <Copyright />
-          </Wrapper>
-        </Container>
-      </footer>
 
-    </ParentCont>
+          <Footer />
+
+        </div>
+
+      </footer >
+
+
+
+    </div>
 
   )
 }

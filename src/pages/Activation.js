@@ -1,10 +1,10 @@
 import React from "react";
-import ParentCont from "../components/ParentCont";
-import Layout from "../components/Layout";
 import Container from "../components/Container";
 import Wrapper from "../components/Wrapper";
-import { Header, Footer, Sidebar, Nav, Copyright } from "../components"
-import Main from "../components/Main";
+import Sidebar from "../components/Sidebar";
+import Main_Three from "../components/Main_Three";
+import Nav3 from "../components/Nav3";
+import Footer from "../components/Footer";
 
 import { Card, CardHeader, CardBody, CardFooter, Box } from '@chakra-ui/react'
 import { Input } from '@chakra-ui/react'
@@ -15,101 +15,124 @@ import { Input } from '@chakra-ui/react'
 const Activation = () => {
 
   return (
-    <ParentCont
-    >
+
+    <div
+      className="">
+
       {/* Header */}
-      <Header
-      >
-        <Nav>
-        </Nav>
-      </Header>
+      <header className="bg-white border-b-2 border-gray-200 py-4">
 
-      {/* Main */}
+        {/* Wrapper */}
+        <div className="container mx-auto px-4">
+
+          <Nav3></Nav3>
+
+        </div>
+
+      </header>
+
+
+
       <main
-        className="bg-black mb-8"
+        className="bg-[#F9FAFB]"
       >
 
-        <Container
-          className="container mx-auto bg-white px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12"
-        >
+        {/* Wrapper */}
+        <div className="container mx-auto px-4 py-20">
 
-          <Wrapper
-            className='box-border w-full mx-auto px-2 md:px-12 flex-1 flex-col min-h-[calc(100vh-64px)] gap-12 lg:gap-18 block mt-[48px] lg:grid grid-rows-auto grid-cols-[264px,minmax(0px,1fr)]'>
+          <div className="grid grid-cols-3 gap-4">
 
-            <Box className="">
+            {/* Sidebar */}
+            <div className="">
               <Sidebar />
-            </Box>
+            </div>
+            
 
-            <Box>
-              <Wrapper
-                className='box-border gap-6 grid mb-6 grid-cols-1 max-cols-content'
+            {/* Activation card */}
+            <div className="col-span-3 lg:col-span-2 w-[100%]">
+
+              <div
+                className=''
               >
-                <div className="box-border">
+
+                <div className="mb-4">
+
                   <h1 className="mb-0 mt-0 text-gray-800 text-base lg:text-2xl font-medium font-inter leading-6">
                     Activation
                   </h1>
                 </div>
 
-                <Card
-                  className="box-border flex flex-col flex-grow items-center justify-center rounded-md p-4 bg-white shadow-lg"
+                {/* Card */}
+                <div
+                  className="box-border flex flex-col flex-grow items-center justify-center rounded-md lg:px-8 py-20 bg-white shadow-lg"
                 >
-                  <CardHeader>
+
+                  {/* Card header */}
+                  <div>
+
                     <p
                       className="box-border mb-0 mt-0 text-gray-600 text-base font-medium leading-6"
                     >
                       {"Please, enter your Activation Code"}
-                    </p>{" "}
-                  </CardHeader>
-                  <CardBody className="box-inherit whitespace-nowrap overflow-hidden truncate border-0 m-0 outline-none bg-transparent block text-inherit w-full max-w-[75%] text-gray-800 text-base leading-6 break-words py-5">
+                    </p>
+
+                  </div>
+
+                  {/* Card body */}
+                  <div className="box-inherit whitespace-nowrap overflow-hidden truncate border-0 m-0 outline-none bg-transparent block text-inherit w-full max-w-[75%] text-gray-800 text-base leading-6 break-words py-5">
                     <Input
                       variant='outline'
                       placeholder='Activation Code'
-                      // placeholderStyles={{
-                      //   color: "gray.400",
-                      //   fontStyle: "italic",
-                      // }}
 
-                      className="py-8 border border-b border-gray-200 font"
+                      className="py-5 md:py-8 border border-b border-gray-200 font"
                     />
-                  </CardBody>
+                  </div>
 
-                  <CardFooter
-                    className="relative w-full"
+                  {/* Card footer */}
+                  <div
+                    className="relative w-full mt-8 lg:mt-0"
                   >
                     <button
                       // onClick={}
-                      className="box-border absolute bottom-0 right-[120px]  border-0 m-0 overflow-visible antialiased tracking-normal font-inter rounded-md outline-none transition duration-300 ease-in font-base leading-4 text-center bg-blue-500 text-white py-2 px-4 cursor-not-allowed pointer-events-none opacity-50"
+                      className=" lg:mb-9  box-border absolute bottom-0 right-[80px] md:right-[120px]  border-0 m-0 overflow-visible antialiased tracking-normal font-inter rounded-md outline-none transition duration-300 ease-in font-base leading-4 text-center bg-blue-900 text-white py-2 px-4 cursor-not-allowed pointer-events-none opacity-50"
                     >
                       Activate
                     </button>
-                  </CardFooter>
-                </Card>
-              </Wrapper>
-            </Box>
+                  </div>
 
-          </Wrapper>
+                </div>
+              </div>
+            </div>
 
+          </div>
 
-        </Container>
+        </div>
 
 
       </main>
 
+
+
       {/* Footer */}
       <footer
-        className="bg-black border-t-2 border-gray-200"
+        className="p-4 bg-white sm:p-6 dark:bg-gray-800 border-t-2 border-gray-200"
       >
-        <Container
-          className="container mx-auto bg-white px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12 lg:px-20"
+        {/* Wrapper */}
+        <div
+          className="container mx-auto px-4"
         >
-          <Wrapper>
-            <Footer />
-            <Copyright />
-          </Wrapper>
-        </Container>
-      </footer>
 
-    </ParentCont>
+          <Footer />
+
+        </div>
+
+      </footer >
+
+
+
+    </div>
+
+ 
 
   )
 }

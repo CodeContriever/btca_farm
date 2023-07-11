@@ -1,74 +1,65 @@
 import React from "react";
 import { useState } from 'react';
-import ParentCont from "../components/ParentCont";
-import Container from "../components/Container";
 import Wrapper from "../components/Wrapper";
-import { Header, Footer, Sidebar, Nav, Copyright } from "../components"
 
-import { Box } from "@chakra-ui/react"
+
+import { Box, useColorMode, useColorModeValue } from '@chakra-ui/react';
+import Sidebar from "../components/Sidebar";
+import Main_Three from "../components/Main_Three";
+import Nav3 from "../components/Nav3";
+import Footer from "../components/Footer";
 
 
 
 
 const Payout = () => {
 
-  // const [showPayout, setShowPayout] = useState(false);
-  // const [showHistory, setShowHistory] = useState(false);
-  // const handlePayoutClick = () => {
-  //   setShowPayout(!showPayout);
-  // };
-  // const handleHistoryClick = () => {
-  //   setShowHistory(!showHistory);
-  // };
-
   const [activeButton, setActiveButton] = useState(null);
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
-  };
-  return (
-    <ParentCont
-    >
-      {/* Header */}
-      <header
-        className='box-border w-[100%] bg-white sticky top-0 left-0 right-0 z-[10001] mb-8 border-b-2 border-gray-200 my-0 shadow-[inset 0 -1px #e9eaea]'
-      >
-        <Container
-          className="container mx-auto bg-white px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12"
-        >
-          <Wrapper className="box-border  px-2 md:px-4">
-            <Box>
-            <Nav></Nav>
-            </Box>
-          </Wrapper>
+  }
 
-        </Container>
+  return (
+    <div
+    className="">
+
+      {/* Header */}
+      <header className="bg-white border-b-2 border-gray-200 py-4">
+
+        {/* Wrapper */}
+        <div className="container mx-auto px-4">
+
+          <Nav3></Nav3>
+
+        </div>
+
       </header>
 
 
-      {/* Main */}
+
       <main
-        className="bg-black mb-8"
+        className="bg-[#F9FAFB]"
       >
 
-        <Container
-          className="container mx-auto bg-white px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12"
-        >
+        {/* Wrapper */}
+        <div className="container mx-auto px-4 py-20">
+          <div className="grid grid-cols-3 gap-4">
 
-          <Wrapper
-            className='box-border w-full mx-auto px-2 md:px-4 flex-1 flex-col min-h-[calc(100vh-64px)] gap-12 lg:gap-18 block mt-[48px] lg:grid grid-rows-auto grid-cols-[264px,minmax(0px,1fr)]'>
-
-            <Box className="">
+            <div className="">
               <Sidebar />
-            </Box>
+            </div>
 
-            <Box>
-              <div>
-                <div>
+            <div className="col-span-3 lg:col-span-2 w-[100%]">
+
+               <div>
+                <div className="mb-4">
+
                   <h1
                     className="box-border mb-0 mt-0 text-gray-800 text-base lg:text-2xl font-medium font-inter leading-6"
                   >
                     Payout
                   </h1>
+
                 </div>
 
                 {/* Banner */}
@@ -98,15 +89,18 @@ const Payout = () => {
                 {activeButton === 'payout' && (
 
                   <Wrapper className="">
-                    <Box
+                    <div
                       className="box-border rounded-md p-4 bg-red-100 py-4"
                     >
+
                       <div
                         className="box-border flex"
                       >
+
                         <div
                           className="box-border inline-flex flex-shrink-0 mr-2"
                         >
+
                           <svg
                             className="box-border"
                             height="24"
@@ -144,7 +138,7 @@ const Payout = () => {
                           </p>
                         </div>
                       </div>{" "}
-                    </Box>
+                    </div>
                   </Wrapper>
                 )}
 
@@ -154,9 +148,11 @@ const Payout = () => {
                   <Wrapper
                     className="box-border mb-6"
                   >
-                    <Box
+
+                    <div
                       className="box-border bg-gray-100 rounded-md border border-gray-200 pb-8"
                     >
+
                       <div
                         className="box-border pt-4 pb-0 px-4 flex"
                       >
@@ -171,7 +167,7 @@ const Payout = () => {
                         <div
                           className="box-border flex  mr-0"
                         >
-                          <Box className="box-border p-6 grid gap-4 grid-cols-3">
+                          <div className="flex flex-col box-border p-6 lg:grid gap-4 grid-cols-3">
 
                             {/* from */}
                             <form>
@@ -287,42 +283,46 @@ const Payout = () => {
                               </div>
 
                             </div>
-                          </Box>
+                          </div>
 
                         </div>
 
                       </div>
-                    </Box>
+                    </div>
                   </Wrapper>
                 )}
 
 
               </div>
-            </Box>
+            </div>
 
-          </Wrapper>
+          </div>
 
-
-        </Container>
+        </div>
 
 
       </main>
 
+
+
       {/* Footer */}
       <footer
-        className="bg-black border-t-2 border-gray-200"
+        className="p-4 bg-white sm:p-6 dark:bg-gray-800 border-t-2 border-gray-200"
       >
-        <Container
-          className="container mx-auto bg-white px-4 md:px-8 lg:px-20  py-4 md:py-8 lg:py-12"
+        {/* Wrapper */}
+        <div
+          className="container mx-auto px-4"
         >
-          <Wrapper>
-            <Footer />
-            <Copyright />
-          </Wrapper>
-        </Container>
-      </footer>
 
-    </ParentCont>
+          <Footer />
+
+        </div>
+
+      </footer >
+
+
+
+    </div>
 
   )
 }

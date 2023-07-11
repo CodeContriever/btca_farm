@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { Routes, Route, Navigate} from "react-router-dom"
 import LandingPage from "./pages/LandingPage";
+import Test from "./pages/Test";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
-import PageNotFound from "./pages/PageNotFound";
+import NotFoundPage from "./pages/NotFoundPage";
 import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import Application from "./pages/Application";
@@ -21,6 +22,7 @@ import { AuthContext } from './AuthContext';
 
 
 
+
 const App = () => {
   const { isAuthenticated } = useContext(AuthContext);
 
@@ -32,10 +34,12 @@ const App = () => {
     <div className="">
       <Routes>
       <Route exact path='/' element={<LandingPage/>} />
+      <Route  path='/test' element={<Test/>} />
       <Route  path='/signup' element={<Signup/>} />
       <Route  path='/signin' element={<Signin/>} />
-      <Route path="/404" element={<PageNotFound />} />
-      <Route path="/home" element={<PrivateRoute element={<HomePage />} />} />
+      <Route path="*" element={<NotFoundPage />} />
+      {/* <Route path="/home" element={<PrivateRoute element={<HomePage />} />} /> */}
+      <Route path='/home' element={<HomePage />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/activation' element={<Activation />} />
         <Route path='/application' element={<Application />} />
