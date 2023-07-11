@@ -30,7 +30,7 @@ const Sidebar = () => {
         {" "}
 
         {/* main sidebar */}
-        <Wrapper>
+        <Wrapper className="mb-8">
           <ul
             className="box-border mb-0 mt-0 border border-gray-200 rounded-md p-[4px] bg-gray-100 pl-[4px] pt-[24px] flex flex-col gap-8"
           >
@@ -48,7 +48,7 @@ const Sidebar = () => {
                 />
                 {" "}
                 <span
-                  className="box-border outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-[8px] block"
+                  className="box-border text-base lg:text-xl font-inter outline-none whitespace-nowrap overflow-hidden  overflow-ellipsis ml-[8px] block"
                 >
                   Dashboard
                 </span>
@@ -69,7 +69,7 @@ const Sidebar = () => {
                 />
                 {" "}
                 <span
-                  className="box-border outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-[8px] block"
+                  className="box-border text-base lg:text-xl font-inter outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-[8px] block"
                 >
                   Applications
                 </span>
@@ -90,7 +90,7 @@ const Sidebar = () => {
                 />
                 {" "}
                 <span
-                  className="box-border outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-[8px] block"
+                  className="box-border text-base lg:text-xl font-inter outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-[8px] block"
                 >
                   My Wallet
                 </span>
@@ -111,7 +111,7 @@ const Sidebar = () => {
                 />
                 {" "}
                 <span
-                  className="box-border outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-2 block"
+                  className="box-border text-base lg:text-xl font-inter outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-2 block"
                 >
                   License Keys
                 </span>
@@ -143,7 +143,7 @@ const Sidebar = () => {
                   />
                 </svg>{" "}
                 <span
-                  className="box-border outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-[8px] block"
+                  className="box-border text-base lg:text-xl font-inter outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-[8px] block"
                 >
                   Activation
                 </span>
@@ -175,7 +175,7 @@ const Sidebar = () => {
                   />
                 </svg>{" "}
                 <span
-                  className="box-border outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-[8px] block"
+                  className="box-border text-base lg:text-xl font-inter outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-[8px] block"
                 >
                   Payouts
                 </span>
@@ -205,7 +205,7 @@ const Sidebar = () => {
                 />
                 {" "}
                 <span
-                  className="box-border outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-[8px] block"
+                  className="box-border text-base lg:text-xl font-inter outline-none whitespace-nowrap overflow-hidden overflow-ellipsis ml-[8px] block"
                 >
                   Support
                 </span>
@@ -216,8 +216,8 @@ const Sidebar = () => {
             <li
               className="box-border mt-[4px] rounded-md"
             >
-              <Button
-                className="box-border bg-transparent border-0 m-0  antialiased tracking-normal  normal-case font-inherit font-inter rounded-md transition duration-300 ease-in-out text-gray-700 text-base font-medium leading-6 flex items-center cursor-pointer relative justify-start"
+              <button
+                className="box-border border-0 m-0  antialiased tracking-normal  normal-case  text-base lg:text-xl font-inter rounded-md transition duration-300 ease-in-out text-gray-700  font-medium leading-6 flex items-center cursor-pointer relative justify-start px-2"
                 ref={btnRef} onClick={onOpen}
               >
                 <IoHelpBuoyOutline
@@ -226,11 +226,11 @@ const Sidebar = () => {
                 />
                 {" "}
                 <span
-                  className="box-border outline-none ml-[8px] block"
+                  className="box-border text-base lg:text-xl font-inter outline-none ml-[8px] block"
                 >
                   Help
                 </span>
-              </Button>
+              </button>
 
               <Drawer
                 isOpen={isOpen}

@@ -1,228 +1,441 @@
-// import React from 'react'
-// import './styles/Header.module.css';
-// import logo from "../assets copy/images/logo.png"
-// import Wrapper from './Wrapper';
+<div
+className="box-border mb-6"
+>
+<div
+  className="box-border bg-gray-100 rounded-md border border-gray-200"
+>
+  <div
+    className="box-border pt-4 pb-0 px-4 flex"
+  >
+    {" "}
+    <p
+      className="box-border mb-0 mt-0 text-gray-700 text-base font-medium leading-6"
+    >
+      {"Filter"}
+    </p>{" "}
+    <div
+      className="box-border flex ml-auto mr-0"
+    />
+  </div>{" "}
+  <form className="box-border">
+    <div
+      className="box-border p-6 grid gap-4 grid-cols-3"
+    >
+      <div
+        className="box-border text-gray-700"
+      >
+        <div
+          className="box-border rounded-t-md p-0 px-3 bg-gray-200 flex relative"
+        >
+          <div
+            className="box-border items-center text-gray-500 flex flex-shrink-0 mr-3"
+          >
+            <svg
+              className="box-border"
+              height="24"
+              width="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M16 2.5a.75.75 0 01.75.75v.356c.384.061.735.161 1.066.33a4 4 0 011.748 1.748c.24.471.341.982.39 1.57.046.573.046 1.28.046 2.164v4.164c0 .883 0 1.591-.047 2.164-.048.588-.149 1.099-.389 1.57a4 4 0 01-1.748 1.748c-.471.24-.982.341-1.57.39-.573.046-1.281.046-2.164.046H9.918c-.883 0-1.591 0-2.164-.047-.588-.048-1.099-.149-1.57-.389a4 4 0 01-1.748-1.748c-.24-.471-.341-.982-.39-1.57C4 15.173 4 14.465 4 13.582V9.418c0-.883 0-1.591.047-2.164.048-.588.149-1.099.389-1.57a4 4 0 011.748-1.748 3.533 3.533 0 011.066-.33V3.25a.75.75 0 011.5 0v.255c.351-.005.739-.005 1.168-.005h4.164c.43 0 .817 0 1.168.005V3.25A.75.75 0 0116 2.5zM7.25 5.134v.116a.75.75 0 001.5 0v-.244A80.12 80.12 0 019.95 5h4.1c.464 0 .858 0 1.2.006v.244a.75.75 0 001.5 0v-.116c.154.038.277.084.385.138a2.5 2.5 0 011.092 1.093c.115.224.19.516.231 1.011.03.366.039.807.041 1.374H5.501c.002-.567.01-1.008.04-1.374.041-.495.117-.787.231-1.011a2.5 2.5 0 011.093-1.093c.108-.054.231-.1.385-.138zM5.5 10.25h13v3.3c0 .922 0 1.57-.042 2.073-.04.496-.116.788-.23 1.012a2.5 2.5 0 01-1.093 1.092c-.224.115-.516.19-1.012.231-.504.041-1.15.042-2.073.042h-4.1c-.922 0-1.57 0-2.074-.042-.495-.04-.787-.116-1.011-.23a2.5 2.5 0 01-1.093-1.093c-.114-.224-.19-.516-.23-1.012-.041-.504-.042-1.15-.042-2.073v-3.3zm10.25 6.25a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"
+                fillRule="evenodd"
+                style={{ boxSizing: "border-box" }}
+              />
+            </svg>
+          </div>{" "}
+          <div
+            className="box-border flex-1 relative"
+          >
+            {/* datepicker */}
+            <div
+              className="box-border flex-1 relative"
+              label="From"
+            >
+              <div
+                className="box-border static"
+              >
+                <input
+                  id="input-5"
+                  className="font-inherit rounded-md inline-block box-border h-8 leading-5 border-0 outline-none py-5 px-0 transition-border-b border-transparent bg-transparent shadow-none text-inherit text-base min-h-12 w-full"
+                  name="date"
+                  type="text"
+                  autoComplete="off"
+                />
+                <i
+                  className="box-border leading-none align-middle text-gray-500 text-base absolute right-0 top-4 transform translate-y-0 flex"
+                >
+                  <i style={{ boxSizing: "border-box" }} />
+                </i>
+              </div>
+            </div>{" "}
+            <label
+              className="plc-field__label"
+              htmlFor="input-5"
+              style={{
+                boxSizing: "border-box",
+                transition:
+                  "transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s",
+                color: "#55575c",
+                fontSize: "16px",
+                lineHeight: "24px",
+                wordBreak: "break-word",
+                left: "0px",
+                pointerEvents: "none",
+                position: "absolute",
+                top: "12px",
+                transformOrigin: "left top",
+              }}
+            >
+              <span
+              className="box-border outline-none"
+               
+              >
+                From
+              </span>
+            </label>
+          </div>{" "}
+        </div>{" "}
+      </div>{" "}
+      <div
+        className="box-border text-gray-700"
+      >
+        <div
+          className="box-border rounded-t-md p-0 px-3 bg-gray-200 flex relative"
+        >
+          <div
+            className="box-border items-center text-gray-500 flex flex-shrink-0 mr-3"
+          >
+            <svg
+              className="box-border"
+              height="24"
+              width="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M16 2.5a.75.75 0 01.75.75v.356c.384.061.735.161 1.066.33a4 4 0 011.748 1.748c.24.471.341.982.39 1.57.046.573.046 1.28.046 2.164v4.164c0 .883 0 1.591-.047 2.164-.048.588-.149 1.099-.389 1.57a4 4 0 01-1.748 1.748c-.471.24-.982.341-1.57.39-.573.046-1.281.046-2.164.046H9.918c-.883 0-1.591 0-2.164-.047-.588-.048-1.099-.149-1.57-.389a4 4 0 01-1.748-1.748c-.24-.471-.341-.982-.39-1.57C4 15.173 4 14.465 4 13.582V9.418c0-.883 0-1.591.047-2.164.048-.588.149-1.099.389-1.57a4 4 0 011.748-1.748 3.533 3.533 0 011.066-.33V3.25a.75.75 0 011.5 0v.255c.351-.005.739-.005 1.168-.005h4.164c.43 0 .817 0 1.168.005V3.25A.75.75 0 0116 2.5zM7.25 5.134v.116a.75.75 0 001.5 0v-.244A80.12 80.12 0 019.95 5h4.1c.464 0 .858 0 1.2.006v.244a.75.75 0 001.5 0v-.116c.154.038.277.084.385.138a2.5 2.5 0 011.092 1.093c.115.224.19.516.231 1.011.03.366.039.807.041 1.374H5.501c.002-.567.01-1.008.04-1.374.041-.495.117-.787.231-1.011a2.5 2.5 0 011.093-1.093c.108-.054.231-.1.385-.138zM5.5 10.25h13v3.3c0 .922 0 1.57-.042 2.073-.04.496-.116.788-.23 1.012a2.5 2.5 0 01-1.093 1.092c-.224.115-.516.19-1.012.231-.504.041-1.15.042-2.073.042h-4.1c-.922 0-1.57 0-2.074-.042-.495-.04-.787-.116-1.011-.23a2.5 2.5 0 01-1.093-1.093c-.114-.224-.19-.516-.23-1.012-.041-.504-.042-1.15-.042-2.073v-3.3zm10.25 6.25a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"
+                fillRule="evenodd"
+                style={{ boxSizing: "border-box" }}
+              />
+            </svg>
+          </div>{" "}
+          <div
+            className="box-border flex-1 relative"
+          >
+            <div
+              className="box-border text-gray-700 text-base leading-6 break-words relative inline-block w-full"
+              label="To"
+            >
+              <div
+                className="box-border static"
+                style={{ boxSizing: "border-box", position: "static" }}
+              >
+                <input
+                  id="input-6"
+                  className="font-inherit rounded-md inline-block box-border h-9 leading-5 border-0 outline-none py-5 px-0 transition border-b border-transparent bg-transparent shadow-none text-inherit text-base min-h-12 w-full"
+                  name="date"
+                  type="text"
+                  autoComplete="off"
+                />
+                <i
+                  className="box-border leading-none align-middle text-gray-500 text-4xl absolute right-0 top-4 transform translate-y-0 flex"
+                >
+                  <i style={{ boxSizing: "border-box" }} />
+                </i>
+              </div>
+            </div>{" "}
 
-
-// import { BellIcon } from '@chakra-ui/icons'
-// import { Box, Button, Text, Wrap, useColorMode, useColorModeValue } from '@chakra-ui/react';
-// // import { Avatar } from '@chakra-ui/react';
-// import { WrapItem } from '@chakra-ui/react';
-// import { Image } from '@chakra-ui/react'
-
-// import { Navbar, Dropdown, Avatar } from 'flowbite-react';
-// import Container from './Container';
-
-
-// const Nav = () => {
-//   const { toggleColorMode } = useColorMode()
-//   const bg = useColorModeValue('red.500', 'red.200')
-//   const color = useColorModeValue('white', 'gray.800')
-
-//   return (
-
-//     <Navbar
-//       fluid
-//       rounded
-//     >
-//       <Navbar.Brand href="#">
-//         <img
-//           alt="BTCA_FARM logo"
-//           className="relative mr-3 h-6 sm:h-9"
-//           src="/logo.png"
-//         />
-//         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-//           BTCA_FARM
-//         </span>
-//       </Navbar.Brand>
-
-//       <div className="flex md:order-2">
-//         <Navbar.Toggle />
-
-//       </div>
-
-//       <Navbar.Collapse
-//         className='md:hidden'
-//       >
-//         <Navbar.Link
-//           active
-//           href="/dashboard"
-//         >
-//           <p>
-//             Dashboard
-//           </p>
-//         </Navbar.Link>
-//         <Navbar.Link href="#">
-//           Applications
-//         </Navbar.Link>
-//         <Navbar.Link href="#">
-//           My Wallets
-//         </Navbar.Link>
-//         <Navbar.Link href="#">
-//           License Keys
-//         </Navbar.Link>
-//         <Navbar.Link href="#">
-//           Activation
-//         </Navbar.Link>
-//         <Navbar.Link href="#">
-//           Activation
-//         </Navbar.Link>
-//       </Navbar.Collapse>
-
-//       <Box
-//         className='absolute md:left-[300px] lg:left-[520px] xl:left-[550px] 2xl:left-[850px]'
-//       >
-//         <Container
-//           className='hidden md:flex gap-8 justify-center items-center'
-//         >
-
-//           <Wrapper>
-//             <button className="flex items-center p-2 transition-transform duration-300 ease-in transform-gpu hover:-translate-y-1 hover:scale-110 font-inter cursor-pointer">
-
-//               <BellIcon  w={12} h={10} />
-
-//               <span className="absolute top-1/4 right-1 px-1 py-1 text-xs font-bold bg-purple-600 text-white rounded-full">
-//                 124
-//               </span>
-//             </button>
-//           </Wrapper>
-
-//           <Wrapper>
-//             <button
-//               onClick={toggleColorMode}
-//               className="box-border bg-inherit border-0 m-0 overflow-visible font-normal font-inter rounded-6 outline-none px-8 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 self-center text-gray-700 cursor-pointer flex"
-//             >
-//               <svg
-//                 height="28"
-//                 width="28"
-//                 fill="currentColor"
-//                 viewBox="0 0 24 24"
-//                 xmlns="http://www.w3.org/2000/svg"
-//                 style={{ boxSizing: "border-box" }}
-//               >
-//                 <path
-//                   d="M20.147 8.836A.5.5 0 0120 8.483V4.5a.5.5 0 00-.5-.5h-3.982a.5.5 0 01-.354-.147l-2.81-2.81a.5.5 0 00-.707 0l-2.81 2.81A.5.5 0 018.483 4H4.5a.5.5 0 00-.5.5v3.983a.5.5 0 01-.146.353l-2.81 2.81a.5.5 0 000 .707l2.81 2.81a.5.5 0 01.146.354V19.5a.5.5 0 00.5.5h3.983a.5.5 0 01.354.146l2.81 2.81a.5.5 0 00.707 0l2.81-2.81a.5.5 0 01.354-.146H19.5a.5.5 0 00.5-.5v-3.983a.5.5 0 01.147-.353l2.81-2.81a.5.5 0 000-.708l-2.81-2.81zM12 18a5.976 5.976 0 01-1.479-.187c-.413-.106-.43-.658-.081-.903A5.99 5.99 0 0013 12a5.99 5.99 0 00-2.56-4.91c-.35-.245-.332-.797.081-.903.474-.122.97-.187 1.48-.187 3.31 0 6 2.69 6 6s-2.69 6-6 6z"
-//                 />
-//               </svg>
-//             </button>{" "}
-//           </Wrapper>
-
-//           <Wrapper
-//             className='hidden xl:block'
-//           >
-//             <button
-//               className="box-border bg-transparent border-0 m-0 overflow-visible antialiased tracking-normal text-left font-normal font-inter outline-none transition-colors duration-300 ease-in-out self-center text-gray-700 cursor-pointer flex"
-//             >
-//               <span
-//                 className="box-border outline-none bg-center bg-cover bg-no-repeat inline-block h-[24px] w-[24px] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDI0YzYuNjI3IDAgMTItNS4zNzMgMTItMTJTMTguNjI3IDAgMTIgMCAwIDUuMzczIDAgMTJzNS4zNzMgMTIgMTIgMTJ6IiBmaWxsPSIjRjBGMEYwIi8+PHBhdGggZD0iTTIuNDggNC42OTVBMTEuOTU2IDExLjk1NiAwIDAwLjQxMyA4Ljg3aDYuMjQzTDIuNDggNC42OTV6TTIzLjU4NyA4Ljg3YTExLjk1NSAxMS45NTUgMCAwMC0yLjA2Ny00LjE3NkwxNy4zNDMgOC44N2g2LjI0M3pNLjQxMyAxNS4xM2ExMS45NTcgMTEuOTU3IDAgMDAyLjA2NyA0LjE3Nmw0LjE3Ni00LjE3NUguNDEzek0xOS4zMDYgMi40OEExMS45NTcgMTEuOTU3IDAgMDAxNS4xMy40MTV2Ni4yNDJsNC4xNzYtNC4xNzV6TTQuNjk0IDIxLjUyYTExLjk1NyAxMS45NTcgMCAwMDQuMTc1IDIuMDY3di02LjI0M0w0LjY5NCAyMS41MnpNOC44NjkuNDE0QTExLjk1OCAxMS45NTggMCAwMDQuNjk0IDIuNDhsNC4xNzUgNC4xNzVWLjQxNHptNi4yNjEgMjMuMTczYTExLjk1NiAxMS45NTYgMCAwMDQuMTc2LTIuMDY4bC00LjE3Ni00LjE3NXY2LjI0M3ptMi4yMTQtOC40NTdsNC4xNzUgNC4xNzZhMTEuOTU1IDExLjk1NSAwIDAwMi4wNjgtNC4xNzVoLTYuMjQzeiIgZmlsbD0iIzAwNTJCNCIvPjxwYXRoIGQ9Ik0yMy44OTggMTAuNDM1SDEzLjU2NVYuMTAyYTEyLjEyIDEyLjEyIDAgMDAtMy4xMyAwdjEwLjMzM0guMTAyYTEyLjEyIDEyLjEyIDAgMDAwIDMuMTNoMTAuMzMzdjEwLjMzM2ExMi4xMiAxMi4xMiAwIDAwMy4xMyAwVjEzLjU2NWgxMC4zMzNhMTIuMTIgMTIuMTIgMCAwMDAtMy4xM3oiIGZpbGw9IiNEODAwMjciLz48cGF0aCBkPSJNMTUuMTMgMTUuMTNsNS4zNTUgNS4zNTVjLjI0Ni0uMjQ2LjQ4MS0uNTAzLjcwNS0uNzdsLTQuNTg0LTQuNTg1SDE1LjEzem0tNi4yNiAwaC0uMDAxbC01LjM1NSA1LjM1NWMuMjQ2LjI0Ni41MDQuNDgxLjc3LjcwNmw0LjU4NS00LjU4NVYxNS4xM3ptMC02LjI2TDMuNTE1IDMuNTE1Yy0uMjQ2LjI0Ni0uNDgxLjUwMy0uNzA1Ljc3TDcuMzk0IDguODdIOC44N3ptNi4yNiAwbDUuMzU1LTUuMzU1YTEyLjAyMyAxMi4wMjMgMCAwMC0uNzctLjcwNkwxNS4xMyA3LjM5NFY4Ljg3eiIgZmlsbD0iI0Q4MDAyNyIvPjwvc3ZnPg==')]"
-//               />
-//             </button>{" "}
-//           </Wrapper>
-
-
-//           {/* <Wrapper
-//             className="px-0 sm:px-[16px] flex items-center"
-//           >
-//             <button
-//               className="box-border bg-transparent border-0 m-0 overflow-visible p-0 cursor-pointer antialiased tracking-normal text-left font-normal font-inter outline-none rounded-full gap-[8px] transition duration-300 ease-in-out grid grid-cols-max-content-auto-max-content  pr-[16px]"
-//             >
-//               <span
-//                 className="box-border outline-none p-4"
-//               >
-//                     <Avatar
-//                       size='xs'
-//                       name='Kola Tioluwani'
-//                       src='https://www.gravatar.com/avatar/7689b26d715e07c5602cc5fd8ec48481?s=300&d=mm&r=g'
-//                       className="border-0 box-content max-w-full align-middle rounded-full h-[32px] w-[32px]"
-//                     />{' '}
-//               </span>{" "}
-
-//               <span
-//                 className="box-border outline-none whitespace-nowrap overflow-hidden overflow-ellipsis flex flex-col"
-//               >
-//                 <span
-//                   className="box-border outline-none whitespace-nowrap overflow-hidden overflow-ellipsis text-gray-900 font-inter text-base leading-6 break-words"
-//                 >
-//                   Waris Azeez
-//                 </span>
-//               </span>{" "}
-//               <svg
-//                 height="16"
-//                 width="16"
-//                 fill="currentColor"
-//                 viewBox="0 0 16 16"
-//                 xmlns="http://www.w3.org/2000/svg"
-//                 style={{ boxSizing: "border-box", color: "#55575c" }}
-//               >
-//                 <path
-//                   d="M3.5 5L8 10l4.5-5h-9z"
-//                 />
-//               </svg>
-//             </button>{" "}
-//           </Wrapper> */}
-
-//           <Wrapper className='flex items-center gap-8'>
-//             <Box className='rounded-[50%] '>
-//           <Avatar size='md' src='https://bit.ly/broken-link' />
-//           </Box>
-
-//           <Text>Waris Azeez</Text>
-
-//           <svg
-//                 height="16"
-//                 width="16"
-//                 fill="currentColor"
-//                 viewBox="0 0 16 16"
-//                 xmlns="http://www.w3.org/2000/svg"
-//                 style={{ boxSizing: "border-box", color: "#55575c" }}
-//               >
-//                 <path
-//                   d="M3.5 5L8 10l4.5-5h-9z"
-//                 />
-//               </svg>
-//           </Wrapper>
-
-// {/* <Wrapper className="px-0 flex items-center">
-//   <button className="box-border bg-transparent border-0 m-0 overflow-visible p-0 cursor-pointer antialiased tracking-normal text-left font-normal font-inter outline-none rounded-full transition duration-300 ease-in-out grid grid-cols-max-content-auto-max-content">
-//     <span className="box-border p-4">
-//       <Avatar
-//         size="xs"
-//         name="Kola Tioluwani"
-//         src="https://www.gravatar.com/avatar/7689b26d715e07c5602cc5fd8ec48481?s=300&d=mm&r=g"
-//         className="border-0 box-content max-w-full align-middle rounded-full h-32 w-32"
-//       />
-//     </span>
-
-//     <span className="box-border whitespace-nowrap overflow-hidden overflow-ellipsis flex flex-col">
-//       <span className="box-border whitespace-nowrap overflow-hidden overflow-ellipsis text-gray-900 font-inter text-base leading-6 break-words">
-//         Waris Azeez
-//       </span>
-//     </span>
-
-//     <svg
-//       height="16"
-//       width="16"
-//       fill="currentColor"
-//       viewBox="0 0 16 16"
-//       xmlns="http://www.w3.org/2000/svg"
-//       className="box-border"
-//       style={{ color: "#55575c" }}
-//     >
-//       <path d="M3.5 5L8 10l4.5-5h-9" />
-//     </svg>
-//   </button>
-// </Wrapper> */}
-
-
-
-//         </Container>
-
-//       </Box>
-
-
-//     </Navbar>
-
-//   )
-// }
-
-// export default Nav
+            <label
+              className="plc-field__label"
+              htmlFor="input-6"
+              style={{
+                boxSizing: "border-box",
+                transition:
+                  "transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s",
+                color: "#55575c",
+                fontSize: "16px",
+                lineHeight: "24px",
+                wordBreak: "break-word",
+                left: "0px",
+                pointerEvents: "none",
+                position: "absolute",
+                top: "12px",
+                transformOrigin: "left top",
+              }}
+            >
+              <span
+              className="box-border outline-none"
+              >
+                To
+              </span>
+            </label>
+          </div>{" "}
+        </div>{" "}
+      </div>{" "}
+      <div
+        className="box-border"
+      >
+        <div
+          className="box-border text-gray-700"
+          placeholder="All statuses"
+        >
+          <div
+            className="box-border rounded-t-md p-0 px-3 bg-gray-200 flex relative"
+          >
+            {" "}
+            <div
+              className="box-border flex-1 relative"
+            
+            >
+              <div
+                className="box-border text-gray-700 text-base leading-6 break-words py-5 px-0 pr-6 min-h-12 outline-none relative cursor-pointer flex"
+                maxLength="256"
+                tabIndex="0"
+              >
+                <svg
+                  className="box-border transition-opacity duration-200 ease-in-out text-gray-700 ordinal-2 order-1 absolute right-0 top-4"
+                  height="24"
+                  width="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="svg2684555801__a"
+                    height="5"
+                    width="10"
+                    maskUnits="userSpaceOnUse"
+                    x="7"
+                    y="10"
+                    style={{
+                      boxSizing: "border-box",
+                      maskType: "alpha",
+                    }}
+                  >
+                    <path
+                      clipRule="evenodd"
+                      d="M7 10l5 5 5-5H7z"
+                      fill="#fff"
+                      fillRule="evenodd"
+                      style={{ boxSizing: "border-box" }}
+                    />
+                  </mask>
+                  <g
+                    mask="url(#svg2684555801__a)"
+                    style={{ boxSizing: "border-box" }}
+                  >
+                    <path
+                      d="M-13-13h50v50h-50z"
+                      style={{ boxSizing: "border-box" }}
+                    />
+                  </g>
+                </svg>{" "}
+                <div
+                  className="box-border border-0 overflow-hidden p-0 whitespace-nowrap flex-1 leading-6 truncate"
+                >
+                  <div
+                    className="box-border hidden"
+                  />{" "}
+                  <div
+                    className="box-border bg-white rounded-full h-6 w-6 absolute right-3 top-1/2 transform -translate-y-1/2 z-2 hidden"
+                  />{" "}
+                  <span
+                    className="box-border outline-none overflow-hidden block overflow-ellipsis"
+                  >
+                    All statuses
+                  </span>{" "}
+                </div>{" "}
+                <div
+                  className="box-border max-h-72 hidden"
+                  tabIndex="-1"
+                >
+                  <ul
+                    className="box-border mb-0 mt-0 bg-white rounded-md list-none p-1 shadow-md -left-3 overflow-x-hidden pl-1 absolute -right-3 top-[-110%] z-5 inline-block max-h-56"
+                  >
+                    {" "}
+                    <li
+                      className="box-border block"
+                    >
+                      <span
+                        className="box-border outline-none rounded-md p-3.5 whitespace-nowrap text-base font-medium leading-6 items-center cursor-pointer flex min-h-12 relative bg-gray-100 text-blue-500"
+                      >
+                        <span
+                        className="box-border outline-none"
+                        >
+                          All statuses
+                        </span>
+                      </span>{" "}
+                    </li>
+                    <li
+                      className="box-border block mt-4"
+                    >
+                      <span
+                        className="box-border outline-none rounded-md p-3 space-x-2 whitespace-nowrap text-base font-medium leading-6 text-gray-700 bg-gray-100 cursor-pointer flex items-center min-h-12 relative"
+                      >
+                        <span
+                        className="box-border outline-none"
+                        >
+                          Success
+                        </span>
+                      </span>{" "}
+                    </li>
+                    <li
+                      className="box-border block mt-1.5"
+                    >
+                      <span
+                        className="box-border outline-none rounded-md p-3 whitespace-nowrap text-base font-medium leading-6 text-gray-700 bg-transparent cursor-pointer flex items-center min-h-12 relative"
+                      >
+                        <span
+                          style={{
+                            boxSizing: "border-box",
+                            outline: "none",
+                          }}
+                        >
+                          Pending
+                        </span>
+                      </span>{" "}
+                    </li>
+                    <li
+                      className="multiselect__element"
+                      style={{
+                        boxSizing: "border-box",
+                        display: "block",
+                        marginTop: "4px",
+                      }}
+                    >
+                      <span
+                        className="multiselect__option"
+                        style={{
+                          boxSizing: "border-box",
+                          outline: "none",
+                          borderRadius: "4px",
+                          padding: "12px 14px",
+                          whiteSpace: "nowrap",
+                          color: "#55575c",
+                          fontSize: "16px",
+                          fontWeight: 500,
+                          lineHeight: "24px",
+                          WebkitBoxAlign: "center",
+                          alignItems: "center",
+                          cursor: "pointer",
+                          display: "flex",
+                          minHeight: "48px",
+                          position: "relative",
+                        }}
+                      >
+                        <span
+                          style={{
+                            boxSizing: "border-box",
+                            outline: "none",
+                          }}
+                        >
+                          Rejected
+                        </span>
+                      </span>{" "}
+                    </li>{" "}
+                    <li
+                      style={{
+                        boxSizing: "border-box",
+                        display: "none",
+                      }}
+                    >
+                      <span
+                        className="multiselect__option"
+                        style={{
+                          boxSizing: "border-box",
+                          outline: "none",
+                          borderRadius: "4px",
+                          padding: "12px 14px",
+                          whiteSpace: "nowrap",
+                          color: "#55575c",
+                          fontSize: "16px",
+                          fontWeight: 500,
+                          lineHeight: "24px",
+                          WebkitBoxAlign: "center",
+                          alignItems: "center",
+                          cursor: "pointer",
+                          display: "flex",
+                          minHeight: "48px",
+                          position: "relative",
+                        }}
+                      >
+                        <span
+                          style={{
+                            boxSizing: "border-box",
+                            outline: "none",
+                          }}
+                        >
+                          Element not found
+                        </span>
+                      </span>
+                    </li>{" "}
+                    <li
+                      style={{
+                        boxSizing: "border-box",
+                        display: "none",
+                      }}
+                    >
+                      <span
+                        className="multiselect__option"
+                        style={{
+                          boxSizing: "border-box",
+                          outline: "none",
+                          borderRadius: "4px",
+                          padding: "12px 14px",
+                          whiteSpace: "nowrap",
+                          color: "#55575c",
+                          fontSize: "16px",
+                          fontWeight: 500,
+                          lineHeight: "24px",
+                          WebkitBoxAlign: "center",
+                          alignItems: "center",
+                          cursor: "pointer",
+                          display: "flex",
+                          minHeight: "48px",
+                          position: "relative",
+                        }}
+                      >
+                        List is empty.
+                      </span>
+                    </li>{" "}
+                  </ul>
+                </div>
+              </div>{" "}
+              <label
+                className="plc-field__label"
+                htmlFor="input-7"
+                style={{
+                  boxSizing: "border-box",
+                  transition:
+                    "transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s",
+                  fontSize: "16px",
+                  lineHeight: "24px",
+                  wordBreak: "break-word",
+                  left: "0px",
+                  pointerEvents: "none",
+                  position: "absolute",
+                  top: "12px",
+                  transformOrigin: "left top",
+                  color: "rgb(170, 171, 173)",
+                  transform: "translateY(-10px) scale(0.75)",
+                }}
+              >
+                <span
+                  style={{ boxSizing: "border-box", outline: "none" }}
+                >
+                  Status
+                </span>
+              </label>
+            </div>{" "}
+          </div>{" "}
+        </div>
+      </div>
+    </div>
+  </form>
+</div>{" "}
+</div>

@@ -7,6 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import theme from './theme'
 
+import AuthProvider from './AuthContext';
 
 import { ChakraProvider } from '@chakra-ui/react'
 import customTheme from "./chakra-theme"; 
@@ -17,7 +18,9 @@ root.render(
     <BrowserRouter>
       <ChakraProvider theme={customTheme}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <AuthProvider>
         <App />
+        </AuthProvider>
       </ChakraProvider>
     </BrowserRouter>
   </React.StrictMode>

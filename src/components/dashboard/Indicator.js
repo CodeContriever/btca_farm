@@ -4,6 +4,7 @@ import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 import { InfoOutlineIcon } from '@chakra-ui/icons'
 import Container from '../Container';
 import Wrapper from '../Wrapper';
+import StatusGuage from './statusGuage';
 
 
 const Indicator = () => {
@@ -11,140 +12,64 @@ const Indicator = () => {
     <section className="box-border">
       {/* Card containers */}
       <Container
-        className="box-border flex flex-col gap-6 lg:grid grid-cols-3 grid-rows-[auto_minmax(174px, _auto)_minmax(142px, _auto)_minmax(142px, _auto)] transition-opacity opacity-100"
-      // style={{
-      //   boxSizing: "border-box",
-      //   gap: "24px",
-      //   display: "grid",
-      //   gridTemplateColumns: "repeat(3, minmax(0px, 1fr))",
-      //   gridTemplateRows:
-      //     "auto minmax(174px, auto) minmax(142px, auto) minmax(142px, auto)",
-      //   transition: "opacity 0.5s ease 0s",
-      //   opacity: 1,
-      // }}
+      className="box-border gap-6 flex flex-col lg:grid grid-cols-3 grid-rows-[auto,minmax(174px,auto),minmax(142px,auto),minmax(142px,auto)] transition-opacity duration-500 ease-in opacity-100"
       >
 
         {/* Card Responsibilty indicator*/}
         <Container
-          className="box-border rounded-md overflow-hidden p-4 bg-white shadow-md flex flex-col justify-between relative col-span-full"
-        // style={{
-        //   boxSizing: "border-box",
-        //   borderRadius: "4px",
-        //   overflow: "hidden",
-        //   padding: "16px",
-        //   backgroundColor: "#fff",
-        //   boxShadow:
-        //     "0 0 1px rgba(26,32,36,0.32),0 4px 8px rgba(91,104,113,0.24)",
-        //   display: "flex",
-        //   WebkitBoxOrient: "vertical",
-        //   WebkitBoxDirection: "normal",
-        //   flexDirection: "column",
-        //   WebkitBoxPack: "justify",
-        //   justifyContent: "space-between",
-        //   position: "relative",
-        //   gridColumn: "1 / -1",
-        // }}
+          className="box-border rounded-md overflow-hidden p-4 lg:p-2 bg-white shadow-lg flex flex-col justify-between relative col-span-full"
         >
           {/* Heading: Responsibility indicator */}
           <Wrapper
-            className="box-border flex items-center justify-between mb-[16px]"
-          // style={{
-          //   boxSizing: "border-box",
-          //   WebkitBoxAlign: "center",
-          //   alignItems: "center",
-          //   display: "flex",
-          //   WebkitBoxPack: "justify",
-          //   justifyContent: "space-between",
-          //   marginBottom: "16px",
-          // }}
+            className="box-border flex items-center justify-between gap-2 mb-4"
           >
+            <Box>
             <h1
-              className="box-border mb-0 mt-0 text-gray-700 font-medium text-[14px] leading-6"
-            // style={{
-            //   boxSizing: "border-box",
-            //   marginBottom: "0px",
-            //   marginTop: "0px",
-            //   color: "#2b2d33",
-            //   fontFamily: "Inter",
-            //   fontSize: "14px",
-            //   fontWeight: 500,
-            //   lineHeight: "21px",
-            // }}
+              className="box-border mb-0 mt-0 text-gray-700 font-medium font-inter text-base lg:text-xl leading-6"
             >
-              <span style={{ boxSizing: "border-box", outline: "none" }}>
+              <span>
                 Responsibility Indicator
               </span>{" "}
             </h1>
+            </Box>
 
-            <Spacer></Spacer>
-
+            <Box>
             <h1
-              className="box-border rounded-md px-[3px] py-[3px] text-green-500 font-normal text-[12px] leading-5 bg-green-200 uppercase"
-            // style={{
-            //   boxSizing: "border-box",
-            //   borderRadius: "4px",
-            //   padding: "3px 8px",
-            //   color: "#24c38e",
-            //   fontFamily: "Inter",
-            //   fontSize: "12px",
-            //   fontWeight: 400,
-            //   lineHeight: "18px",
-            //   backgroundColor: "#ecf8eb",
-            //   textTransform: "uppercase",
-            // }}
+              className="box-border rounded-md p-1 lg:p-2 text-green-500 font-inter font-normal text-base lg:text-xl leading-5 bg-green-200 uppercase"
             >
               <span style={{ boxSizing: "border-box", outline: "none" }}>
                 Price is good
               </span>{" "}
             </h1>
+            </Box>
           </Wrapper>
 
-
           <Wrapper
-            className="box-border flex flex-col lg:grid grid-cols-[300px_1fr] gap-[24px] "
-          // style={{
-          //   boxSizing: "border-box",
-          //   gap: "24px",
-          //   display: "grid",
-          //   gridTemplateColumns: "248px 1fr",
-          // }}
+            className="box-border gap-6 flex flex-col lg:grid grid-cols-[248px,1fr]"
           >
-
             {/* First Card */}
             <div
-              className="box-border p-[16px] bg-gray-200 grid gap-[16px]"
+              className="box-border p-4 bg-gray-200 grid gap-[16px]"
             >
               {/* Card */}
               <div
                 className='py-6'
               >
-                <Box
-                  style={{
-                    boxSizing: "border-box",
-                  }}
-                >
+                <Box>
                   <h1
-                    className="box-border mt-0 text-gray-500 font-inter text-[14px] font-medium leading-6 mb-[4px]"
+                    className="box-border mt-0 text-gray-500 font-inter text-base lg:text-xl font-medium leading-6 mb-[4px]"
                   >
                     Market Price
                   </h1>{" "}
                 </Box>
 
-                {/* Card Body 1 */}
+                {/* Market price */}
                 <Box
-                  className="resIndicatorPrice__amount"
-                  style={{
-                    boxSizing: "border-box",
-                    gap: "8px",
-                    WebkitBoxAlign: "center",
-                    alignItems: "center",
-                    display: "grid",
-                    gridTemplateColumns: "max-content 1fr max-content",
-                  }}
+                  className="box-border gap-2 items-center justify-center grid grid-cols-[max-content,1fr,max-content]"
                 >
 
-                  <Image
-                    className="border-0 box-content max-w-full align-middle m-[2px] h-[20px] w-[20px]"
+                  <img
+                    className="border-0 box-content max-w-full align-middle m-1.5 h-6 w-6"
                     alt="BTCA logo"
                     src="/logo.png"
                   />{" "}
@@ -164,64 +89,34 @@ const Indicator = () => {
                     />
                   </svg>{" "}
 
-                  <Text
-                    className="box-border mb-0 mt-0 text-aaabad font-Inter text-[20px] font-medium leading-[32px] break-words whitespace-nowrap"
+                  <p
+                    className="box-border mb-0 mt-0 text-gray-500 font-inter text-base lg:text-xl font-medium leading-6 break-words whitespace-nowrap"
                   >
                     USDT
-                  </Text>
+                  </p>
                 </Box>
               </div>
 
-              {/* Card Body 2 */}
-              <div
+              {/* Community price*/}
+              <Wrapper
               >
                 <Box
-                  style={{
-                    boxSizing: "border-box",
-                  }}
                 >
-                  <Heading
-                    className="resIndicatorPrice__title"
-                    style={{
-                      boxSizing: "border-box",
-                      marginTop: "0px",
-                      color: "#aaabad",
-                      fontFamily: "Inter",
-                      fontSize: "14px",
-                      fontWeight: 500,
-                      lineHeight: "21px",
-                      marginBottom: "4px",
-                    }}
-                  >
+                  <p
+                    className="box-border mt-0 text-gray-500 font-inter text-base lg:text-xl font-medium leading-5 mb-1">
                     Community Price
-                  </Heading>{" "}
+                  </p>{" "}
                 </Box>
 
                 <Box
-                  className="resIndicatorPrice__amount"
-                  style={{
-                    boxSizing: "border-box",
-                    gap: "8px",
-                    WebkitBoxAlign: "center",
-                    alignItems: "center",
-                    display: "grid",
-                    gridTemplateColumns: "max-content 1fr max-content",
-                  }}
+                  className="box-border gap-2 items-center justify-center grid grid-cols-[max-content,1fr,max-content]"
                 >
 
-                  <Image
-                    className="resIndicatorPrice__logo"
+                  <img
+                    className="border-0 box-content max-w-full align-middle m-2 h-6 w-6"
                     alt="BTCA logo"
                     src="/logo.png"
-                    style={{
-                      border: "0px",
-                      boxSizing: "content-box",
-                      maxWidth: "100%",
-                      verticalAlign: "middle",
-                      margin: "2px",
-                      height: "20px",
-                      width: "20px",
-                    }}
+                    
                   />{" "}
 
                   <svg
@@ -239,51 +134,26 @@ const Indicator = () => {
                     />
                   </svg>{" "}
 
-                  <Text
-                    className="resIndicatorPrice__currency"
-                    style={{
-                      boxSizing: "border-box",
-                      marginBottom: "0px",
-                      marginTop: "0px",
-                      color: "#aaabad",
-                      fontFamily: "Inter",
-                      fontSize: "20px",
-                      fontWeight: 500,
-                      lineHeight: "32px",
-                      wordBreak: "break-word",
-                      whiteSpace: "nowrap",
-                    }}
+                  <p
+                    className="box-border mb-0 mt-0 text-gray-500 font-inter text-base lg:text-xl font-medium leading-8 break-words whitespace-no-wrap"
                   >
                     USDT
-                  </Text>
+                  </p>
                 </Box>
-              </div>
+              </Wrapper>
+
             </div>
 
             {/* Second card */}
-            <div
+            <Wrapper
             >
               {/* Card Body */}
-              <div
-                className="box-border border-2 border-gray-300 rounded-md p-[40px] flex items-center justify-center flex flex-col lg:grid gap-8 grid-cols-[max-content, 1fr]"
-              // style={{
-              //   boxSizing: "border-box",
-              //   border: "1px solid #e9eaea",
-              //   borderRadius: "4px",
-              //   padding: "16px",
-              //   WebkitBoxAlign: "center",
-              //   alignItems: "center",
-              //   display: "grid",
-              //   WebkitBoxPack: "center",
-              //   justifyContent: "center",
-              //   gap: "32px",
-              //   gridTemplateColumns: "max-content 1fr",
-              // }}
+              <Box
+                className="box-border border-2 border-gray-300 rounded-md p-9 flex flex-col items-center justify-center lg:grid gap-8 grid-cols-[max-content,1fr]"
               >
                 {/* indicator_Guage */}
-                <Box
-                  className="resIndicatorGauge__gauge"
-                  style={{ boxSizing: "border-box", textAlign: "center" }}
+                <div
+                  className="text-center"
                 >
                   <svg
                     height="130"
@@ -348,7 +218,7 @@ const Indicator = () => {
                       style={{ boxSizing: "border-box" }}
                     />
                   </svg>
-                </Box>{" "}
+                </div>{" "}
 
                 {/* Indicator-guage_Legend */}
                 <Box
@@ -356,18 +226,18 @@ const Indicator = () => {
                 >
                   {/* Green */}
                   <Box
-                    className="box-border gap-[8px] flex items-center"
+                    className="box-border gap-2 flex items-center"
                   >
                     <div
-                      className="box-border rounded-full h-[8px] w-[8px] mr-[8px] bg-green-500"
+                      className="box-border rounded-full h-2 w-2 mr-2 bg-green-500"
                     />{" "}
                     <p
-                      className="box-border mb-0 mt-0 font-inter font-semibold uppercase text-gray-800 text-sm leading-6"
+                      className="box-border mb-0 mt-0 font-inter font-semibold uppercase text-gray-800 text-base lg:text-xl leading-6"
                     >
                       Green:
                     </p>{" "}
                     <p
-                      className="box-border mb-0 mt-0 text-gray-800 font-inter text-sm leading-6 font-medium"
+                      className="box-border mb-0 mt-0 text-gray-800 font-inter text-base lg:text-xl leading-6 font-medium"
                     >
                       Price is Good
                     </p>
@@ -412,9 +282,9 @@ const Indicator = () => {
                   </Box>
 
                 </Box>
-              </div>
+              </Box>
 
-            </div>
+            </Wrapper>
           </Wrapper>
 
         </Container>
@@ -624,27 +494,6 @@ const Indicator = () => {
         {/* Card: Farm/minting status */}
         <Container
           className="box-border rounded-md overflow-hidden flex flex-col justify-between relative bg-[#f8f8f8] border-1 border-outline-none  p-[2px] lg:grid grid-cols-2 col-span-2 row-span-3 gap-4"
-          // style={{
-          //   boxSizing: "border-box",
-          //   borderRadius: "4px",
-          //   overflow: "hidden",
-          //   WebkitBoxOrient: "vertical",
-          //   WebkitBoxDirection: "normal",
-          //   flexDirection: "column",
-          //   WebkitBoxPack: "justify",
-          //   justifyContent: "space-between",
-          //   position: "relative",
-          //   background: "#f8f8f8",
-          //   outline: "1px solid #e9eaea",
-          //   backgroundColor: "",
-          //   boxShadow: "none",
-          //   gridColumn: "1 / -1",
-          //   gridArea: "2 / 2 / 5 / 4",
-          //   gap: "16px",
-          //   padding: "8px",
-          //   display: "grid",
-          //   gridTemplateColumns: "repeat(2, minmax(0px, 1fr))",
-          // }}
         >
           {" "}
 
@@ -665,7 +514,7 @@ const Indicator = () => {
             </Box>{" "}
 
             {/* Status guage */}
-            <svg
+            {/* <svg
               className="box-border mb-16 w-full"
               height="207"
               width="232"
@@ -777,7 +626,8 @@ const Indicator = () => {
                   />
                 </radialgradient>
               </defs>
-            </svg>{" "}
+            </svg>{" "} */}
+            <StatusGuage/>
 
             {/* Buttons: increase license & top up my farm */}
             <div
@@ -815,18 +665,6 @@ const Indicator = () => {
 
               <CardBody
                 className="box-border gap-[8px] text-gray-700 font-inter text-base font-bold leading-6 break-words grid grid-cols-[24px,1fr,auto]"
-                // style={{
-                //   boxSizing: "border-box",
-                //   gap: "8px",
-                //   color: "#2b2d33",
-                //   fontFamily: "Inter",
-                //   fontSize: "16px",
-                //   fontWeight: 700,
-                //   lineHeight: "24px",
-                //   wordBreak: "break-word",
-                //   display: "grid",
-                //   gridTemplateColumns: "24px 1fr auto",
-                // }}
               >
                 <img
                   className="border-0 box-content max-w-full align-middle m-[2px] h-[20px] w-[20px"

@@ -11,7 +11,7 @@ const Dashbar = () => {
       <Flex minWidth='max-content' alignItems='center' gap='2'>
         <Box>
           <h2
-            className="box-border mb-0 mt-0 text-gray-800 font-inter text-[16px] font-medium leading-6 flex"
+            className="box-border mb-0 mt-0 text-gray-800 font-inter text-base lg:text-xl font-medium leading-6 flex"
           >
             BTCA Farming Dashboard
           </h2>
@@ -20,7 +20,7 @@ const Dashbar = () => {
         <Spacer />
 
         <Box
-          className="hidden lg:flex box-border relative cursor-pointer w-64 rounded-md border border-gray-300 px-4 py-3 transition duration-300 outline-none bg-gray-100 flex items-center pr-4 focus:outline-purple"
+          className="hidden  box-border relative cursor-pointer w-64 rounded-md border border-gray-300 px-4 py-3 transition duration-300 outline-none bg-gray-100 lg:flex items-center pr-4 focus:outline-purple"
           tabIndex="0"
         >
           <ChevronUpIcon

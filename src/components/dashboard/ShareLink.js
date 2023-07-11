@@ -39,44 +39,18 @@ const ShareLink = () => {
             }}
           >
             {' '}
-            {/* <Text
-              className="infoField__value"
-              style={{
-                boxSizing: 'border-box',
-                marginBottom: '0px',
-                marginTop: '0px',
-                fontFamily: 'Inter',
-                fontSize: '16px',
-                lineHeight: '24px',
-                color: '#2b2d33',
-                wordBreak: 'break-all',
-              }}
-            >
-              Show Referral link
-            </Text> */}
 
             <Button
               onClick={handleClick}
               variant='link'
               colorScheme="#2b2d33"
-              // mt={4}
               disabled={linkGenerated}
             >
               Show Referral link
             </Button>
             {linkGenerated && (
               <Text
-              className="infoField__value"
-              style={{
-                boxSizing: 'border-box',
-                marginBottom: '0px',
-                marginTop: '0px',
-                fontFamily: 'Inter',
-                fontSize: '16px',
-                lineHeight: '24px',
-                color: '#2b2d33',
-                wordBreak: 'break-all',
-              }}
+              className="box-border mb-0 mt-0 font-inter text-base leading-6 text-gray-700 break-all"
               >
                 Generated Link: <a href="#">example.com</a>
               </Text>
@@ -85,21 +59,9 @@ const ShareLink = () => {
           </Box>{' '}
           {/* Switcher */}
           <Box
-            className="infoField__actions"
-            style={{
-              boxSizing: 'border-box',
-              WebkitBoxAlign: 'center',
-              alignItems: 'center',
-              display: 'flex',
-              flexShrink: 0,
-              marginLeft: 'auto',
-              marginRight: '0px',
-            }}
+            className="box-border flex items-center flex-shrink-0 ml-auto mr-0"
           >
             <FormControl display="flex" alignItems="center">
-              {/* <FormLabel htmlFor='email-alerts' mb='0'>
-                Enable email alerts?
-              </FormLabel> */}
               <Switch id="email-alerts" />
             </FormControl>{' '}
           </Box>
@@ -107,26 +69,12 @@ const ShareLink = () => {
 
         {/* terms and conditions */}
         <Wrapper
-          className="dashboardShareLinks__legals"
-          style={{
-            boxSizing: 'border-box',
-            textDecoration: 'underline',
-            color: '#aaabad',
-            fontFamily: 'Inter',
-            fontSize: '12px',
-            fontWeight: 400,
-            lineHeight: '18px',
-            marginTop: '8px',
-          }}
+          className="box-border underline text-gray-500 font-inter text-xs font-normal leading-6 mt-2"
         >
           <a
             href="#"
             target="_blank"
-            style={{
-              boxSizing: 'border-box',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
+            className='box-border no-underline text-current'
           >
             Terms and conditions of sale and distribution
           </a>

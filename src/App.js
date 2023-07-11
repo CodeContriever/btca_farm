@@ -1,18 +1,10 @@
-// import './App.css';
-
-// fonts
-import "../src/assets copy/fonts/Lato-Regular.ttf"
-import "../src/assets copy/fonts/Lato-Bold.ttf"
-import "../src/assets copy/fonts/Inter-Regular.ttf"
-import "../src/assets copy/fonts/Inter-Medium.ttf"
-import "../src/assets copy/fonts/Inter-SemiBold.ttf"
-import "../src/assets copy/fonts/Inter-Bold.ttf"
-import "../src/assets copy/fonts/Montserrat-Regular.ttf"
-import "../src/assets copy/fonts/Montserrat-Medium.ttf"
-
-
-import { Routes, Route } from "react-router-dom"
-import Homepage from "./pages/Homepage";
+import React, { useContext } from 'react';
+import { Routes, Route, Navigate} from "react-router-dom"
+import LandingPage from "./pages/LandingPage";
+import Signup from "./pages/Signup";
+import Signin from "./pages/Signin";
+import PageNotFound from "./pages/PageNotFound";
+import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import Application from "./pages/Application";
 import Activation from "./pages/Activation";
@@ -21,13 +13,29 @@ import License from "./pages/License";
 import Wallet from "./pages/Wallet";
 import Payout from "./pages/Payout";
 
+// import PrivateRoute from "./PrivateRoute"
+import { AuthContext } from './AuthContext';
+
+
+
+
 
 
 const App = () => {
+  const { isAuthenticated } = useContext(AuthContext);
+
+  const PrivateRoute = ({ path, element }) => {
+    return isAuthenticated() ? element : <Navigate to="/signin" replace />;
+  };
+
   return (
     <div className="">
       <Routes>
-        <Route exact path='/' element={<Homepage/>} />
+      <Route exact path='/' element={<LandingPage/>} />
+      <Route  path='/signup' element={<Signup/>} />
+      <Route  path='/signin' element={<Signin/>} />
+      <Route path="/404" element={<PageNotFound />} />
+      <Route path="/home" element={<PrivateRoute element={<HomePage />} />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/activation' element={<Activation />} />
         <Route path='/application' element={<Application />} />

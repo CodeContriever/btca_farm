@@ -29,14 +29,15 @@ const Dashboard = () => {
     >
       {/* Header */}
       <header
-       className='box-border w-[100%] bg-black sticky top-0 left-0 right-0 z-[10001] mb-8 border-b-2 border-gray-200 my-0 shadow-[inset 0 -1px #e9eaea]'
+        className='box-border w-[100%] bg-white sticky top-0 left-0 right-0 z-[10001] mb-8 border-b-2 border-gray-200 my-0 shadow-[inset 0 -1px #e9eaea]'
       >
         <Container
-        className="container mx-auto bg-white px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12"
+          className="container mx-auto bg-white px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12"
         >
-          {/* flex flex-wrap justify-between items-center overflow-hidden */}
-          <Wrapper>
+          <Wrapper className="box-border px-2 md:px-4">
+            <Box>
             <Nav></Nav>
+            </Box>
           </Wrapper>
 
         </Container>
@@ -44,15 +45,19 @@ const Dashboard = () => {
 
     
 
-      <main className="bg-black mb-8">
+      <main
+      className="bg-black mb-8"
+      // className="bg-gradient-to-r from-[#A020F0] to-blue-500 mb-8"
+      >
 
         <Container
-          className="container mx-auto bg-white  px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12"
+          className="container mx-auto bg-white px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12"
         >
 
-          <Wrapper className='box-border flex-1 flex-col min-h-[calc(100vh-64px)] gap-12 p-6 pb-20 block mt-[48px] lg:grid grid-rows-auto grid-cols-[264px,minmax(0px,1fr)]'>
+          <Wrapper 
+          className='box-border w-full mx-auto px-2 md:px-12 flex-1 flex-col min-h-[calc(100vh-64px)] gap-12 lg:gap-18 block mt-[48px] lg:grid grid-rows-auto grid-cols-[264px,minmax(0px,1fr)]'>
 
-            <Box>
+            <Box className="">
               <Sidebar />
             </Box>
 
@@ -78,7 +83,6 @@ const Dashboard = () => {
       <footer
         className="bg-black border-t-2 border-gray-200"
       >
-        {/* <Layout> */}
         <Container
         className="container mx-auto bg-white px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12 lg:px-20"
         >
@@ -87,7 +91,6 @@ const Dashboard = () => {
           <Copyright />
           </Wrapper>
           </Container>
-        {/* </Layout> */}
       </footer>
 
     </ParentCont>
